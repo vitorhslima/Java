@@ -1,0 +1,24 @@
+package bytebank;
+
+public class TesteMetodo {
+	
+	public static void main(String[] args) {
+		Conta contaDoZinho =new Conta();
+		contaDoZinho.saldo = 100;
+		contaDoZinho.deposita(50);		
+		System.out.println("Conta do zinho tem um saldo de " + contaDoZinho.saldo);
+		
+		boolean conseguiuRetirar = contaDoZinho.saca(20);
+		System.out.println(contaDoZinho.saldo);
+		System.out.println(conseguiuRetirar);
+		
+		Conta contaGleice = new Conta();
+		contaGleice.deposita(1000);
+		System.out.println(contaGleice.saldo);
+
+		
+		contaGleice.transfere(300, contaDoZinho);
+		System.out.println(contaGleice.saldo);
+		System.out.println(contaDoZinho.saldo);
+	}	
+}
