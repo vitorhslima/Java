@@ -4,4 +4,5 @@
     <fullyQualifiedTypeName name="Cliente"/>
     <fullyQualifiedTypeName name="sun.security.action.GetBooleanAction"/>
     <fullyQualifiedTypeName name="Conta"/>
+    <fullyQualifiedTypeName name="Funcionario"/>
 </qualifiedTypeNameHistroy>
