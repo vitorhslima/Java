@@ -5,4 +5,6 @@
     <fullyQualifiedTypeName name="sun.security.action.GetBooleanAction"/>
     <fullyQualifiedTypeName name="Conta"/>
     <fullyQualifiedTypeName name="Funcionario"/>
+    <fullyQualifiedTypeName name="FuncionarioTeste"/>
+    <fullyQualifiedTypeName name="Gerente"/>
 </qualifiedTypeNameHistroy>
