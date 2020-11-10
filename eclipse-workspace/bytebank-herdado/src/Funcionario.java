@@ -1,14 +1,13 @@
-
-public class Funcionario {
+// não pode dar new 
+public abstract class Funcionario {
 
 	private String nome;
 	private String cpf;
 	private double salario;
 	
-		
-	public double getBonificacao() {
-		return this.salario * 0.05;
-	}
+	// metodo sem copo, não há implementação	
+	public abstract double getBonificacao(); 
+	
 	
 	public String getNome() {
 		return nome;

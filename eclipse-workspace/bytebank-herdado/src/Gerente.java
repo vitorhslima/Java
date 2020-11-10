@@ -1,22 +1,23 @@
 
-public class Gerente extends Funcionario {
-
-	private int senha;
-	
-	public void setSenha(int senha) {
-		this.senha = senha;
-	}
-	
-	public boolean auntentica(int senha ) {
-		if (this.senha == senha) {
-			return true;
-		}else {
-			return false;
-		}
-	}	
+public class Gerente extends Funcionario implements Autenticavel {
 		
-	public double getBonificacao() {
-		return super.getBonificacao() + super.getSalario();
-	}			
+	private AutenticacaoUtil util;
+
+	public Gerente() {
+		this.util = new AutenticacaoUtil();
+}	
+	public double getBonificacao() {		
+		return super.getSalario();
+	}
+
+	@Override
+	public void setSenha(int senha) {
+		this.util.setSenha(senha);
+	}
+
+	@Override
+	public boolean autentica(int senha) {
+		return this.util.autentica(senha);	
+		}
 	
 }
