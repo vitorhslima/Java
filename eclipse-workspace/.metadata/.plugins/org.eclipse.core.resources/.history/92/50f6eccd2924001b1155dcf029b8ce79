@@ -1,0 +1,46 @@
+
+public class Casa {
+	
+	private int sala;
+	private int cozinha;
+	private int quarto;
+	private int banheiro;
+	
+	private int comodo = 2;	
+	
+	
+	public int getSala() {
+		if (comodo == 1) {
+			System.out.println("Voê está na sala");						
+		}
+			System.out.println("");		
+			return sala;
+	}
+	
+	public int getCozinha() {
+		if (comodo == 2) {
+			System.out.println("Você está na cozinha");
+		}
+		System.out.println("");
+		return cozinha;
+	}
+	
+	public int getQuarto() {
+		if (comodo == 3) {
+			System.out.println("Você está no quarto");
+		}
+		System.out.println("");
+		return quarto;
+	}
+	
+	public int getBanheiro() {
+		if (comodo == 4) {
+			System.out.println("Você está no Banheiro");			
+		}
+		System.out.println("");
+		return banheiro;
+	}
+	
+	
+
+}

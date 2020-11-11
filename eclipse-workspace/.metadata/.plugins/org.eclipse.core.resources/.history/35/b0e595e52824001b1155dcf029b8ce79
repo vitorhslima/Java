@@ -1,0 +1,15 @@
+
+public class TesteCasa {
+	
+	public static void main(String[] args) {
+
+
+		Sala a = new Sala();
+		
+		System.out.println(a.getSala());
+		
+		
+		
+	}
+
+}

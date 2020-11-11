@@ -1,0 +1,14 @@
+
+public class Quarto {
+	
+	public String quarto = "quarto";
+	
+	public String getQuarto(String comodo) {
+		if (this.quarto == comodo) {
+			System.out.println("Você está no quarto");
+		}
+		System.out.println("");
+		return "";	
+	}
+
+}

@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class testee  {
+	
+	public static void main(String[] args) {
+
+		Scanner s = new Scanner(System.in);
+		System.out.println("Digite o comodo que você quer ir ?");
+		String comodo = s.nextLine();		
+		
+			
+		if (comodo == "banheiro" || comodo == "cozinha" || comodo == "quarto" || comodo == "sala") {
+			System.out.println("Você esta no " + comodo);
+		}else {
+			System.out.println("Esse não é um comodo valido");
+		}		
+		
+		
+	}
+	
+	
+
+}

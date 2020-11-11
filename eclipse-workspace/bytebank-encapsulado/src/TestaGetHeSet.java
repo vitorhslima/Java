@@ -15,7 +15,7 @@ public class TestaGetHeSet {
 		
 		System.out.println(conta.getTitular().getNome());
 		
-		conta.getTitular().setProfissao("Programsdor");
+		conta.getTitular().setProfissao("Programador");
 		System.out.println("A profissão do " + conta.getTitular().getNome() + 
 				" é " + conta.getTitular().getProfissao());
 		

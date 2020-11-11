@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class ProjetoBase {
+	
+	public static void main(String[] args) {	
+	
+	Scanner s = new Scanner(System.in);	
+	System.out.println("Para qual comodo você quer ir ?");
+	String comodo = s.next();
+	
+	boolean existeComando = false;
+	
+	for(Comodo c: Comodo.values()) {
+		if (comodo == c.name() ) {
+			existeComando = true;
+			System.out.println("Você está no " + comodo);
+		}
+	}
+	
+	if (existeComando == false) {
+		//System.out.println("Você está no " + comodo);
+	}else {
+		System.out.println("Esse comodo é invalido");
+		
+	}
+	
+	
+	
+	}
+
+}

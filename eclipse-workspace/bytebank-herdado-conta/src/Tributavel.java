@@ -1,6 +1,6 @@
 
 public interface Tributavel {
 	
-	double getValorImposto();
+	double getValorImposto();   // Não precisa colocar abstract pois por padrão já vem 
 
 }

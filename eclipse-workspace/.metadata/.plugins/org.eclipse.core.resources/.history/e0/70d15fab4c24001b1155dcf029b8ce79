@@ -1,0 +1,16 @@
+
+public class TesteCasa {
+	
+	public static void main(String[] args) {
+		
+		
+		Casa c = new Casa();
+		
+		
+		
+		System.out.println(c.getBanheiro("banheiro"));
+			
+		
+	}
+
+}

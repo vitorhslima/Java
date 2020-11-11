@@ -1,0 +1,14 @@
+
+public class Banheiro {
+	
+	private String banheiro = "banheiro";
+	
+	public String getBanheiro(String comodo) {
+		if (this.banheiro == comodo) {
+			System.out.println("Você está no Banheiro");			
+		}
+		System.out.println("");
+		return "";		
+	}
+
+}

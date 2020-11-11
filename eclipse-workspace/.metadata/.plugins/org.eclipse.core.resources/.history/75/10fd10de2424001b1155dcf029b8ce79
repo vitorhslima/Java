@@ -1,0 +1,11 @@
+
+public class Sala {
+	
+	private String sala;
+	 	 
+	 public void getSala() {
+		System.out.println("Você está na sala");
+		
+	}
+
+}

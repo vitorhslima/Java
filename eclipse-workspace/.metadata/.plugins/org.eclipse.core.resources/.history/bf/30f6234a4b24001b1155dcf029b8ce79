@@ -1,0 +1,11 @@
+
+public class ValidarCasa {
+	
+	if (comodo == "banheiro") {
+		System.out.println("Você esta no " + comodo);
+	}else {
+		System.out.println("Esse comodo não é valido");
+	}
+	
+
+}

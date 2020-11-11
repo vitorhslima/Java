@@ -1,0 +1,17 @@
+
+public class TesteCasa {
+	
+	public static void main(String[] args) {
+
+
+		Casa a = new Casa();
+		
+		System.out.println(a.getSala("sala"));
+//		System.out.println(a.getBanheiro());
+//		System.out.println(a.getQuarto());
+//		System.out.println(a.getCozinha());	
+			
+		
+	}
+
+}

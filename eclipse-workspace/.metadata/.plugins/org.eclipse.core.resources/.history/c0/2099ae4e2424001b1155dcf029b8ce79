@@ -1,0 +1,14 @@
+
+public class Sala {
+	
+	private int sala;
+
+	 public void sala() {
+		 return;
+	 }
+	 
+	 public void getSala() {
+		 System.out.println("Você está na sala");		
+	}
+
+}

@@ -1,0 +1,20 @@
+
+public class TesteCasa {
+	
+	public static void main(String[] args) {
+		
+		
+		Quarto q = new Quarto();
+		Banheiro b = new Banheiro();
+		
+		System.out.println(q.getQuarto("quarto"));
+
+
+//		Casa a = new Casa();
+//		
+//		System.out.println(a.getSala("cozinha"));		
+			
+		
+	}
+
+}
