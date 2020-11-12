@@ -8,30 +8,40 @@ public class ProjetoBase {
 		
 		String comodo = null;
 		
-		System.out.println("Para sair escreva 'sair' ");		
+		System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-="); 
+		System.out.println("Para sair escreva 'sair' ");
+		System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-="); 
 	
-			do {			
-		
-			System.out.println("Para qual comodo você quer ir ?");
-			comodo = s.next();
-			
-			boolean existeComando = false;			
-			
-			for(Comodo c: Comodo.values()) {
-				if (comodo.equals(c.name())) {
-					existeComando = true;
+		do {			
+			    System.out.println("--------------------------");
+				System.out.println("Qual comodo você quer ir ?");
+				System.out.println("--------------------------");
+				comodo = s.next().toLowerCase();
+				
+				boolean existeComando = false;			
+				
+				for(Comodo c: Comodo.values()) {
+					if (comodo.equals(c.name())) {
+						existeComando = true;
+					}
 				}
-			}
-			
-			if (existeComando == false) {
-				System.out.println("Esse comodo é invalido");
-			}else {		
-				System.out.println("Você está no " + comodo);			
-			}
+				
+				if (existeComando == false) {
+					System.out.println("----------------------");
+					System.out.println("Esse comodo é invalido");
+					System.out.println("----------------------");
+				}else {		
+					System.out.println("-----------------------"); 
+					System.out.println("Você está no " + comodo);	
+					System.out.println("-----------------------");
+				}
 			
 		} while (!comodo.equals("sair"));
-	
-	System.out.println("Saindo de Casa");
+			
+			
+	System.out.println("°.°.°.°.°.°.°.°.°.°.°.°.°.°.°.°");
+	System.out.println("Saindo de Casa, até a proxima :/");
+	System.out.println("°.°.°.°.°.°.°.°.°.°.°.°.°.°.°.°");
 			
 	}
 }
