@@ -1,0 +1,6 @@
+
+public class Sala {
+
+	 boolean Fliperama = false;
+	 
+}

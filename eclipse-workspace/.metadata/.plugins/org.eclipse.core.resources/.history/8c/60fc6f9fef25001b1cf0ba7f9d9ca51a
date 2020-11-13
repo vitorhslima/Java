@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+	public class Quarto {	
+
+		boolean televisao = false;
+	
+		public void ligaTv(String comodo, boolean liga) {
+	
+			System.out.println("Você quer ligar a Fliperama | 'liga' ou 'desliga'");
+	
+			if (comodo.equals("liga")) {
+				System.out.println("A televisão foi ligada");
+				boolean televisao = true;
+			}
+			if(!comodo.equals("desliga"))
+			System.out.println("A televisão está desligada");
+			boolean televisao = false;
+	   }
+		
+		public boolean isTvLigada() {		
+			return televisao;
+		}
+		
+		
+}

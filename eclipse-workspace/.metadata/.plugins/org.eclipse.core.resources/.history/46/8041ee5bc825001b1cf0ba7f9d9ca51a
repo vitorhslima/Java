@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Quarto {
+	
+	boolean Televisao = false;
+	
+	Scanner liga = new Scanner(System.in);
+	
+	String comodo = null;
+	
+	comodo = liga.next().toLowerCase();
+	
+	
+	if() {
+		
+	}
+	
+
+}

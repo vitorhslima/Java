@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Sala {
+
+	public class Quarto {
+			
+			boolean televisao = false;
+			
+			String comodo;
+			
+			comodo = liga.next().toLowerCase();
+			
+			 public void ligaFlp(boolean liga) {
+				 
+				  System.out.println("Você quer ligar a televisão | 'liga' ou 'desliga'");
+					
+				  if(comodo.equals("liga")) {
+					  System.out.println("A televisão foi ligada");
+					  boolean televisao = true;
+				  }
+				  if(!comodo.equals("desliga")) {
+					  System.out.println("A televisão está desligada");
+					  boolean Televisao = false;
+				  }
+				  
+			 }	
+	}
+	
+	 
+}

@@ -1,0 +1,8 @@
+
+public enum ComodoEnum {
+
+	cozinha,
+	sala,
+	banheiro,
+	quarto;
+}

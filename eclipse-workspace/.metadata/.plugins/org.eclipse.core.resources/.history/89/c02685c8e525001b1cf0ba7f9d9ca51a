@@ -1,0 +1,8 @@
+
+public class Casa {
+	
+	Quarto quarto = new Quarto();
+	
+	Sala sala = new Sala();
+
+}

@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+	public class Quarto {	
+
+		boolean Fliperama = false;
+	
+		String comodo;
+	
+		comodo=liga.next().toLowerCase();
+	
+		public void ligaTv(boolean liga) {
+	
+			System.out.println("Você quer ligar a Fliperama | 'liga' ou 'desliga'");
+	
+			if (comodo.equals("liga")) {
+				System.out.println("O Fliperama foi ligada");
+				boolean Fliperama = true;
+			}
+			if(!comodo.equals("desliga"))
+			System.out.println("O Fliperama está desligada");
+			boolean Fliperama = false;
+	   }
+		
+		
+}

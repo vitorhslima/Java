@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Quarto {
+	
+	String comodo = "";		
+	comodo = liga.next().toLowerCase();
+	
+	boolean liga(boolean liga) {
+		return liga;
+		if(comodo.equals(liga)) {
+			System.out.println("A televisão foi ligada");
+		}
+		boolean Televisao = false;
+	}				
+		
+		
+		
+		
+	
+	
+}

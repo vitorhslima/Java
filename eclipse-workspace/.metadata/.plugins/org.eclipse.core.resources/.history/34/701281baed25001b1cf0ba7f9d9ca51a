@@ -1,0 +1,9 @@
+import Sala.Quarto;
+
+public class Casa {
+	
+	private Quarto quarto = new Quarto();
+	
+	private Sala sala = new Sala();
+
+}

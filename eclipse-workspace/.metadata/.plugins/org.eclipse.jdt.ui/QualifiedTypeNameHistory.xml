@@ -20,7 +20,10 @@
     <fullyQualifiedTypeName name="SeguroDeVida"/>
     <fullyQualifiedTypeName name="CalculadorDeImposto"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="Quarto"/>
     <fullyQualifiedTypeName name="Banheiro"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.VerifyError"/>
+    <fullyQualifiedTypeName name="Sala"/>
+    <fullyQualifiedTypeName name="Quarto"/>
+    <fullyQualifiedTypeName name="Sala.Quarto"/>
 </qualifiedTypeNameHistroy>
