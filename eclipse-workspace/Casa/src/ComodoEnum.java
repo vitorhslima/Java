@@ -2,8 +2,8 @@
 public enum ComodoEnum {
 
 	cozinha,	
-	banheiro;
-	
-	
+	banheiro,
+	sala,
+	quarto;
 	
 }

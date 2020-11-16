@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Sala {
+			
+			 private boolean fliperama = false;
+			
+			 public void ligaFlp(String comodo, boolean liga) {
+				 
+				 boolean verifica = false;
+				 
+				 Scanner sa = new Scanner(System.in);
+
+				  System.out.println("Você quer ligar o fliperama | 'liga' ou 'desliga'");
+				  
+				  comodo = sa.next().toLowerCase();		
+				  
+				 // if(verifica == false) {
+					  if(sa.equals("liga")) {
+						  System.out.println("O fliperama foi ligada");
+						  setFliperama(true);
+						  verifica = true;
+					  }
+					  if(sa.equals("desliga")) {
+						  System.out.println("O fliperama está desligada");
+						  setFliperama(true);
+						  verifica = true;
+					  }
+			      if(verifica == true) {
+						  System.out.println("Esse comando é invalido");
+						  verifica = false;
+					  }
+				//  }
+					
+				  
+				  
+			 }		
+			 
+			 public boolean isflipeLigada() {
+				 return fliperama;
+			 }
+			 
+			 public void setFliperama(boolean fliperama) {
+				this.fliperama = fliperama;
+			 }
+	 
+}

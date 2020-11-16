@@ -1,0 +1,71 @@
+import java.util.Scanner;
+
+public class ProjetoBase {		
+	
+	
+	public static void main(String[] args) {	
+		
+		Casa casa = new Casa();
+		
+		Scanner s = new Scanner(System.in);	
+		
+		String comodo = "";		
+		
+		
+		System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-="); 
+		System.out.println("Para sair escreva 'sair' ");
+		System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-="); 
+	
+		while (!comodo.equals("sair") && casa.getSala().isflipeLigada()
+				|| casa.getQuarto().isTvLigada()) {
+			
+			    System.out.println("--------------------------");
+				System.out.println("Qual comodo você quer ir ?");
+				System.out.println("--------------------------");
+				comodo = s.next().toLowerCase();
+				
+				boolean existeComando = false;			
+				
+				for(ComodoEnum c: ComodoEnum.values()) {
+					if (comodo.equals(c.name())) {
+						existeComando = true;
+					}
+				}			
+								
+				if (existeComando == true) {
+					System.out.println("----------------------");
+					System.out.println("Você está no " + comodo);
+					System.out.println("----------------------");
+				}else {		
+					System.out.println("-----------------------");
+					System.out.println("Esse comodo é invalido");						
+					System.out.println("-----------------------");
+				}
+				
+				if(comodo.equals("quarto")) {
+					casa.getQuarto().ligaTv(comodo, true);
+				}
+				
+				if(comodo.equals("sala")) {
+					casa.getSala().ligaFlp(comodo, true);
+				}				
+				
+				
+				if(comodo.equals("sair") && (casa.getQuarto().isTvLigada() ||
+						casa.getSala().isflipeLigada())) {
+					System.out.println("Desligue os aparelhos primeiro");
+					System.out.println("-----------------------");
+					
+				}			
+		
+			
+		} 
+		
+		System.out.println("|°.°|°.°|°.°|°.°|°.°|°.°|°.°|°.°|°.°|°.°|");
+		System.out.println("você está saindo de casa, até a proxima :)");
+		System.out.println("|°.°|°.°|°.°|°.°|°.°|°.°|°.°|°.°|°.°|°.°|");
+			
+			
+	
+	}
+}
