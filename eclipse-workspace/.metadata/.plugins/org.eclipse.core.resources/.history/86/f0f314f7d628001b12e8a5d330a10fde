@@ -22,7 +22,7 @@ public class Sala {
 					  }
 					  if(comodo.equals("desliga")) {
 						  System.out.println("O fliperama está desligada");
-						  setFliperama(false);
+						  setFliperama(true);
 						  verifica = true;
 					  }
 			      if(verifica == false) {

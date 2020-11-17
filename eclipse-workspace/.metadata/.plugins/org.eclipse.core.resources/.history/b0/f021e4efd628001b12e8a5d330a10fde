@@ -23,7 +23,7 @@ public class Quarto {
 						
 						if(comodo.equals("desliga")) {
 						System.out.println("A televisão está desligada");
-						setTelevisao(false);
+						setTelevisao(true);
 						Verificador = true;	
 						}
 							

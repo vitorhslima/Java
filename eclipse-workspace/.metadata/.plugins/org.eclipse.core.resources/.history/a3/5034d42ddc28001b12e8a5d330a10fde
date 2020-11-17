@@ -1,6 +1,7 @@
 
 public enum ComodoEnum {
 
+	sair,
 	cozinha,	
 	banheiro,
 	sala,

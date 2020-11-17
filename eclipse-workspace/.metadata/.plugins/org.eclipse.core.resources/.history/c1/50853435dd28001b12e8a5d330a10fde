@@ -70,7 +70,8 @@ public class ProjetoBase {
 
 		}
 
-		
+		System.out.println(!comodo.equals("sair") + " " + (casa.getSala().isflipeLigada()) + " "
+				+ (casa.getQuarto().isTvLigada()));
 		System.out.println("|°.°|°.°|°.°|°.°|°.°|°.°|°.°|°.°|°.°|°.°|°.°|");
 		System.out.println("você está saindo de casa, até a proxima :)");
 		System.out.println("|°.°|°.°|°.°|°.°|°.°|°.°|°.°|°.°|°.°|°.°|°.°|");

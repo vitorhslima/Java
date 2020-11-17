@@ -22,8 +22,10 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="Banheiro"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.VerifyError"/>
     <fullyQualifiedTypeName name="Sala"/>
     <fullyQualifiedTypeName name="Quarto"/>
     <fullyQualifiedTypeName name="Sala.Quarto"/>
+    <fullyQualifiedTypeName name="java.lang.VerifyError"/>
+    <fullyQualifiedTypeName name="MinhaExecao"/>
+    <fullyQualifiedTypeName name="javax.swing.InputVerifier"/>
 </qualifiedTypeNameHistroy>

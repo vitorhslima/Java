@@ -1,12 +1,15 @@
 
 public enum ComodoEnum {
 
+	sair,
 	cozinha,	
 	banheiro,
 	sala,
 	quarto;
 	
 	public static boolean existeComodo(String comodo) {
+		
+		
 		
 		for(ComodoEnum c: ComodoEnum.values()) {
 			if (!comodo.equals("sair")) {
