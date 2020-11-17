@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Sala {
+public class Sala extends Estrutura {
 			
 			 private boolean fliperama = false;
 			
@@ -30,12 +30,14 @@ public class Sala {
 						  verifica = false;
 					  }
 				  }
+				  
+				  getLampada().ligandoHaLampada(comodo);
 					
 				  
 				  
 			 }		
 			 
-			 public boolean isflipeLigada() {
+			 public boolean isfliperamaLigado() {
 				 return fliperama;
 			 }
 			 

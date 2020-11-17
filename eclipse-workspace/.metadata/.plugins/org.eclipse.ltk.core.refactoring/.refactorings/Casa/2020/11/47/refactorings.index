@@ -1,1 +1,4 @@
 1605556956444	Rename local variable 'sair'
+1605635800584	Rename field 'lapadas'
+1605641521814	Rename method 'setLampadas'
+1605646997873	Rename method 'isflipeLigada'

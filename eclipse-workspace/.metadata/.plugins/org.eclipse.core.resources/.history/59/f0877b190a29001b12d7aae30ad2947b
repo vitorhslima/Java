@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class Quarto extends Lampada {	
+
+		private boolean televisao = false;
+	
+			public void ligaTv(String comodo, boolean liga) {
+				
+				boolean Verificador = false;
+				
+				Scanner sair = new Scanner(System.in);	
+		
+				System.out.println("Você quer ligar a televisão | 'liga' ou 'desliga'");
+				
+				comodo = sair.next().toLowerCase();
+				
+				if(Verificador == false) { 
+						if (comodo.equals("liga")) {
+							System.out.println("A televisão foi ligada");
+							setTelevisao(true);
+							Verificador = true;
+						}
+						
+						if(comodo.equals("desliga")) {
+						System.out.println("A televisão está desligada");
+						setTelevisao(false);
+						Verificador = true;	
+						}
+							
+						if(Verificador == false) {
+							System.out.println("Esse comando é invalido");
+							Verificador = false;
+						}									
+				}		
+				
+				ligandoHaLampada(comodo);
+			}			
+				
+		
+		public boolean isTvLigada() {		
+			return televisao;
+		}
+		
+		public void setTelevisao(boolean televisao) {
+			this.televisao = televisao;
+		}
+		
+}

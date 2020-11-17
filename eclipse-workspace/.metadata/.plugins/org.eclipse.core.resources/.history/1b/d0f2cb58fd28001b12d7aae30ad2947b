@@ -1,0 +1,6 @@
+
+public class Estrutura {
+	
+	Lampada lampada = new Lampada();
+
+}

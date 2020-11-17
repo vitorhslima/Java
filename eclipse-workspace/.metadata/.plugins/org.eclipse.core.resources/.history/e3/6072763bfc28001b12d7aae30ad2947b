@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Lampada {
+	
+	private boolean lapadas = false;
+	
+	public void LigandoHaLamada(String lampada) {
+		
+		
+		boolean verifica = false;
+		
+		Scanner a = new Scanner(System.in);
+		
+		System.out.println("Quer Ligar a lampada ? | Para ligar digite 'acesso' Para desligar 'apagado' ");
+		lampada = a.next().toLowerCase();
+		
+		if(verifica == false) {
+			if (lampada.equals("acesso")) {
+				System.out.println("A lampada foi acessa");
+				verifica = true;
+				setLapadas(true);
+			}
+			
+			if (lampada.equals("apagado")) {
+				System.out.println("A lampado foi apagada");
+				verifica = true;
+				setLapadas(false);
+			}
+			
+			if(verifica == false) {
+				System.out.println("Esse comando é invalido");
+			}
+		}	
+		
+	}
+	
+	public void setLapadas(boolean lapadas) {
+		this.lapadas = lapadas;
+	}
+	
+
+}

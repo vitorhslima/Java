@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class ProjetoBase {
+
+	public static void main(String[] args) {
+		
+		Casa casa = new Casa();
+
+		try {
+			casa.gerenciaCasa();	
+		} catch (Exception e) {
+			System.out.println("Me desculpe, aconteceu um erro! Entre em contato para verificarmos o problema");
+		} 
+		
+		
+	}
+}

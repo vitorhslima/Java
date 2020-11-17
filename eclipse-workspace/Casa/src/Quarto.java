@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Quarto {	
+public class Quarto extends Estrutura {	
 
 		private boolean televisao = false;
 	
@@ -30,10 +30,10 @@ public class Quarto {
 						if(Verificador == false) {
 							System.out.println("Esse comando é invalido");
 							Verificador = false;
-						}
-									
-				}			
+						}									
+				}		
 				
+				getLampada().ligandoHaLampada(comodo);
 			}			
 				
 		
