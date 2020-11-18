@@ -6,6 +6,7 @@ public class Lampada {
 	
 	public void ligandoHaLampada(String lampada) {		
 		
+		try {
 		boolean verifica = false;
 		
 		Scanner a = new Scanner(System.in);
@@ -13,6 +14,7 @@ public class Lampada {
 		System.out.println("Quer acender a lampada ? | Para acender digite 'acesso' Para apagar digite 'apagado' ");
 		System.out.println("====================================================================================");
 		lampada = a.next().toLowerCase();
+		
 		
 		if(verifica == false) {
 			if (lampada.equals("acesso")) {
@@ -32,9 +34,17 @@ public class Lampada {
 			}
 			
 			if(verifica == false) {
-				System.out.println("Esse comando é invalido");
+				throw new ComodoInvalidoExcption("Esse comando é invalido");
 			}
 		}	
+		
+		}catch(ComodoInvalidoExcption ex) {
+			String msg = ex.getMessage() ;
+			System.out.println("---------------------");
+			System.out.println(ex.getMessage());
+			System.out.println("---------------------");
+			
+		}
 		
 	}
 	

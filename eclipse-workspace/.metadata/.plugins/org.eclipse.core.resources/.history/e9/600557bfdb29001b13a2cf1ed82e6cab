@@ -1,0 +1,13 @@
+
+public class TesteConecao {
+	
+	public static void main(String[] args) {
+		
+		try {
+			Conecao con = new Conecao();
+		}catch(IllegalStateException ex) {
+			System.out.println("Deu erro na coneção");
+		}
+	}
+
+}

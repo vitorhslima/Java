@@ -6,6 +6,7 @@ public class Quarto extends Estrutura {
 	
 			public void ligaTv(String comodo, boolean liga) {
 				
+			  try {
 				boolean Verificador = false;
 				
 				Scanner sair = new Scanner(System.in);	
@@ -28,13 +29,21 @@ public class Quarto extends Estrutura {
 						}
 							
 						if(Verificador == false) {
-							System.out.println("Esse comando é invalido");
-							Verificador = false;
+							throw new ComodoInvalidoExcption("Esse comando é invalido");						
 						}									
 				}		
 				
 				getLampada().ligandoHaLampada(comodo);
-			}			
+						
+				
+			  }catch(ComodoInvalidoExcption ex) {
+				  String msg = ex.getMessage();
+				  System.out.println("---------------------");
+				  System.out.println(ex.getMessage());
+				  System.out.println("---------------------");
+			  }
+				
+			}
 				
 		
 		public boolean isTvLigada() {		

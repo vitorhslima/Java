@@ -5,6 +5,8 @@ public class Sala extends Estrutura {
 			 private boolean fliperama = false;
 			
 			 public void ligaFlp(String comodo, boolean liga) {
+				
+				 try {					 
 				 
 				 boolean verifica = false;
 				 
@@ -26,14 +28,18 @@ public class Sala extends Estrutura {
 						  verifica = true;
 					  }
 			      if(verifica == false) {
-						  System.out.println("Esse comando é invalido");
-						  verifica = false;
+			    	  	  throw new ComodoInvalidoExcption("Esse comando é invalido");					  
 					  }
 				  }
 				  
 				  getLampada().ligandoHaLampada(comodo);
 					
-				  
+			 	}catch (ComodoInvalidoExcption ex) {
+			 		String msg = ex.getMessage();
+			 		System.out.println("----------------------");
+			 		System.out.println(ex.getMessage());
+			 		System.out.println("----------------------");
+			 	}
 				  
 			 }		
 			 
@@ -43,6 +49,7 @@ public class Sala extends Estrutura {
 			 
 			 public void setFliperama(boolean fliperama) {
 				this.fliperama = fliperama;
-			 }
+			 }		 
+			
 	 
 }

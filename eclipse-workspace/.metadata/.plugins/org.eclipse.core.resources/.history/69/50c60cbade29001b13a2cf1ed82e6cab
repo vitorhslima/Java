@@ -1,0 +1,20 @@
+
+public class TesteConecao {
+	
+	public static void main(String[] args) {
+		
+		Conecao con = null;
+		try {
+			 con = new Conecao();
+		     con.leDados();		     
+		}catch(IllegalStateException ex) {
+			 System.out.println("Deu erro na conexao");			 
+		}finally {				// Serve para ser executado c/ erro ou não
+			if (con != null) {
+				con.fecha();
+			}
+			
+		}
+	}
+
+}

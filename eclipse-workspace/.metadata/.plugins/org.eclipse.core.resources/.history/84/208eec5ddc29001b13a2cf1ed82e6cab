@@ -1,0 +1,17 @@
+
+public class TesteConecao {
+	
+	public static void main(String[] args) {
+		
+		Conecao con = null;
+		try {
+		 con = new Conecao();
+		     con.leDados();
+		     con.fecha();
+		}catch(IllegalStateException ex) {
+			System.out.println("Deu erro na coneção");
+			con.fecha();
+		}
+	}
+
+}

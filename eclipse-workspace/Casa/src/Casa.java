@@ -4,9 +4,8 @@ public class Casa {
 	
 	private Quarto quarto = new Quarto();
 	private Sala sala = new Sala();
-	private Estrutura estrutura = new Estrutura();
-	ComodoInvalidoExcption invalidas = new ComodoInvalidoExcption();
-	
+	private Estrutura estrutura = new Estrutura();	
+
 	public Estrutura getEstrutura() {
 		return estrutura;
 	}
@@ -41,18 +40,21 @@ public class Casa {
 		casa.getQuarto().getLampada().setAcessa(true);
 		casa.getSala().getLampada().setAcessa(true);
 
-		System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=");
+		System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=");  
 		System.out.println("Para sair escreva 'sair' ");
 		System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=");
 
-//		try {if(!comodo.equals("sair"));
-//		
+		 
+			
+		
+				
 		while ((!comodo.equals("sair")) 
 				|| (casa.getSala().isfliperamaLigado()) 
 				|| (casa.getQuarto().isTvLigada())
 				|| (casa.getSala().getLampada().isAcessa())
 				|| (casa.getQuarto().getLampada().isAcessa())) {
 
+			try {
 			if (primeiraVez) {
 				casa.getSala().setFliperama(false);
 				casa.getQuarto().setTelevisao(false);
@@ -83,9 +85,7 @@ public class Casa {
 
 			} else {
 				if (!comodo.equals("sair")) {
-					System.out.println("-----------------------");
-					System.out.println("Esse comodo é invalido");
-					System.out.println("-----------------------");
+					throw new ComodoInvalidoExcption("Esse comodo é invalido");					
 				}
 			}
 
@@ -117,14 +117,12 @@ public class Casa {
 				System.out.println("------------------------------");
 			}
 			
-	//	}
-//		catch (Exception ex) {
-//			System.out.println("-----------------------");  // para implementar amanhã
-//			System.out.println("Esse comodo é invalido");
-//			System.out.println("-----------------------");
-//		}
-			
-			
+			}catch (ComodoInvalidoExcption ex) {
+				String msg = ex.getMessage();
+				System.out.println("-----------------------");  
+				System.out.println(ex.getMessage());
+				System.out.println("-----------------------");
+			}				
 
 		}
 
