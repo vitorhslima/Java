@@ -51,8 +51,8 @@ public class Casa {
 		while ((!comodo.equals("sair")) 
 				|| (casa.getSala().isfliperamaLigado()) 
 				|| (casa.getQuarto().isTvLigada())
-				|| (casa.getSala().getLampada().isAcesa())
-				|| (casa.getQuarto().getLampada().isAcesa())) {
+				|| (casa.getSala().getLampada().isAcessa())
+				|| (casa.getQuarto().getLampada().isAcessa())) {
 
 			try {
 			if (primeiraVez) {
@@ -107,12 +107,12 @@ public class Casa {
 				System.out.println("------------------------------");
 			}
 			
-			if (comodo.equals("sair") && (casa.getQuarto().getLampada().isAcesa())) {
+			if (comodo.equals("sair") && (casa.getQuarto().getLampada().isAcessa())) {
 				System.out.println("Apague a lampada do Quarto");
 				System.out.println("------------------------------");
 			}
 			
-			if (comodo.equals("sair") && (casa.getSala().getLampada().isAcesa())) {
+			if (comodo.equals("sair") && (casa.getSala().getLampada().isAcessa())) {
 				System.out.println("Apague a lampada da Sala");
 				System.out.println("------------------------------");
 			}

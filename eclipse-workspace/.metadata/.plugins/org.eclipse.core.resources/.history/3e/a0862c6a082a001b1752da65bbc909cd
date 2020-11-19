@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Lampada {
 	
-	protected boolean acesa = false;
+	protected boolean acessa = false;
 	
 	public void ligandoHaLampada(String lampada) {		
 		
@@ -11,15 +11,15 @@ public class Lampada {
 		
 		Scanner a = new Scanner(System.in);
 		System.out.println("====================================================================================");
-		System.out.println("Quer acender a lampada ? | Para acender digite 'acesa' Para apagar digite 'apagado' ");
+		System.out.println("Quer acender a lampada ? | Para acender digite 'acesso' Para apagar digite 'apagado' ");
 		System.out.println("====================================================================================");
 		lampada = a.next().toLowerCase();
 		
 		
 		if(verifica == false) {
-			if (lampada.equals("acesa")) {
+			if (lampada.equals("acesso")) {
 				System.out.println("--------------------");
-				System.out.println("A lampada foi acesa");
+				System.out.println("A lampada foi acessa");
 				System.out.println("--------------------");
 				verifica = true;
 				setAcessa(true);
@@ -48,12 +48,12 @@ public class Lampada {
 		
 	}
 	
-	public void setAcessa(boolean acesa) {
-		this.acesa = acesa;
+	public void setAcessa(boolean acessa) {
+		this.acessa = acessa;
 	}
 	
-	public boolean isAcesa() {
-		return acesa;
+	public boolean isAcessa() {
+		return acessa;
 	}
 	
 

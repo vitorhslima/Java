@@ -2,3 +2,5 @@
 1605635800584	Rename field 'lapadas'
 1605641521814	Rename method 'setLampadas'
 1605646997873	Rename method 'isflipeLigada'
+1605750254880	Rename field 'acessa'
+1605750663110	Rename method 'isAcessa'

@@ -48,7 +48,7 @@ public class Lampada {
 		
 	}
 	
-	public void setAcessa(boolean acesa) {
+	public void setAcessa(boolean acessa) {
 		this.acesa = acesa;
 	}
 	

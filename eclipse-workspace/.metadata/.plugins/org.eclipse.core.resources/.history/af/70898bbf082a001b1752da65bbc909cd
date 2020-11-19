@@ -11,7 +11,7 @@ public class Lampada {
 		
 		Scanner a = new Scanner(System.in);
 		System.out.println("====================================================================================");
-		System.out.println("Quer acender a lampada ? | Para acender digite 'acesa' Para apagar digite 'apagado' ");
+		System.out.println("Quer acender a lampada ? | Para acender digite 'aceso' Para apagar digite 'apagado' ");
 		System.out.println("====================================================================================");
 		lampada = a.next().toLowerCase();
 		
@@ -48,11 +48,11 @@ public class Lampada {
 		
 	}
 	
-	public void setAcessa(boolean acesa) {
-		this.acesa = acesa;
+	public void setAcessa(boolean acessa) {
+		this.acesa = acessa;
 	}
 	
-	public boolean isAcesa() {
+	public boolean isAcessa() {
 		return acesa;
 	}
 	
