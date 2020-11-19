@@ -1,0 +1,22 @@
+package brasil.br.com.bytebank.banco.teste;
+
+public class TesteString {
+	
+	public static void main(String[] args) {
+		
+		int a = 3;
+		//String nome = "Alura";
+		//String nome = new String("Alura");
+				
+		//String outra = nome.replace("A", "a");
+		
+		//nome.toLowerCase();
+		String nome = "Mario";
+        nome.replace('o', 'a');
+        System.out.println(nome);
+		
+		//System.out.println(nome);
+		//System.out.println(outra);
+	}
+
+}
