@@ -1,0 +1,11 @@
+package brasil.br.com.bytebank.banco.teste;
+
+public class TesteArrayReferencia {
+
+	public static void main(String[] args) {
+		
+		
+
+	}
+
+}

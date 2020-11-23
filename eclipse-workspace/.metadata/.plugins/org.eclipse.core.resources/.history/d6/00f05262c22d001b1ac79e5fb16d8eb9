@@ -1,0 +1,19 @@
+package brasil.br.com.bytebank.banco.modelo;
+
+public class GuardadorDeContas {
+	
+	private Conta[] referencia; 
+	private int posicaoLivre;
+	
+	public GuardadorDeContas( ) {
+		this.referencia = new Conta[10];
+		this.posicaoLivre = 0;
+	}
+
+	
+	public void adiciana (Conta ref) {
+		this.referencia[this.posicaoLivre] = ref;
+		this.posicaoLivre++;
+	}
+	
+}

@@ -1,0 +1,20 @@
+package brasil.br.com.bytebank.banco.teste;
+
+public class Teste {
+
+	public static void main(String[] args) {
+		
+		int [] idades = new int[4]; // ele inicia c/ zero
+		
+		int idade0 = idades[0];
+		
+		int idade0 = 29;
+		int idade1 = 39;
+		int idade2 = 19;
+		int idade3 = 69;
+		int idade4 = 59;
+		
+		
+	}
+
+}

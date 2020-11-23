@@ -1,0 +1,11 @@
+package brasil.br.com.bytebank.banco.modelo;
+
+public class GuardadorDeContas {
+	
+	private Conta[] referencia; 
+	
+	public GuardadorDeContas( ) {
+		this.referencia = new Conta[10];
+	}
+
+}
