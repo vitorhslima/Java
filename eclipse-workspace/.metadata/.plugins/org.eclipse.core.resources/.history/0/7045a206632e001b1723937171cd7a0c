@@ -1,0 +1,15 @@
+package brasil.br.com.bytebank.banco.util;
+
+public class TesteOurosWrappers {
+	
+	public static void main(String[] args) {
+		
+		Integer idadeRef = Integer.valueOf(29); // autoboxin
+		System.out.println(idadeRef.intValue());	// unboxing
+		
+		Double dRef = Double.valueOf(3.2); // autoboxin
+		System.out.println(dRef.doubleValue()); // unboxing
+		
+	}
+
+}

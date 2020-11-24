@@ -4,7 +4,17 @@ public class Casa {
 	
 	private Quarto quarto = new Quarto();
 	private Sala sala = new Sala();
-	private Estrutura estrutura = new Estrutura();	
+	private Estrutura estrutura = new Estrutura();
+	private Banheiro banheiro = new Banheiro();
+	private Cozinha cozinha = new Cozinha();
+	
+	public Cozinha getCozinha() {
+		return cozinha;
+	}
+	
+	public Banheiro getBanheiro() {
+		return banheiro;
+	}
 
 	public Estrutura getEstrutura() {
 		return estrutura;
@@ -39,6 +49,8 @@ public class Casa {
 		casa.getQuarto().setTelevisao(true);
 		casa.getQuarto().getLampada().setAcessa(true);
 		casa.getSala().getLampada().setAcessa(true);
+		casa.getBanheiro().getLampada().setAcessa(true);
+		casa.getCozinha().getLampada().setAcessa(true);
 
 		System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=");  
 		System.out.println("Para sair escreva 'sair' ");
@@ -52,7 +64,9 @@ public class Casa {
 				|| (casa.getSala().isfliperamaLigado()) 
 				|| (casa.getQuarto().isTvLigada())
 				|| (casa.getSala().getLampada().isAcesa())
-				|| (casa.getQuarto().getLampada().isAcesa())) {
+				|| (casa.getQuarto().getLampada().isAcesa())
+				|| (casa.getBanheiro().getLampada().isAcesa())
+				|| (casa.getCozinha().getLampada().isAcesa())) {
 
 			try {
 			if (primeiraVez) {
@@ -60,6 +74,8 @@ public class Casa {
 				casa.getQuarto().setTelevisao(false);
 				casa.getQuarto().getLampada().setAcessa(false);
 				casa.getSala().getLampada().setAcessa(false);
+				casa.getBanheiro().getLampada().setAcessa(false);
+				casa.getCozinha().getLampada().setAcessa(false);
 				primeiraVez = false;
 			}
 
@@ -77,12 +93,7 @@ public class Casa {
 			}
 
 			if (existeComando == true) {
-				if (!comodo.equals("sair")) {
-					System.out.println("----------------------");
-					System.out.println("Você está no " + comodo);
-					System.out.println("----------------------");
-				}
-
+				if (!comodo.equals("sair")) {}
 			} else {
 				if (!comodo.equals("sair")) {
 					throw new ComodoInvalidoExcption("Esse comodo é invalido");					
@@ -90,12 +101,33 @@ public class Casa {
 			}
 
 			if (comodo.equals("quarto")) {
+				System.out.println("-------------------");
+				System.out.println("Você está no Quarto");
+				System.out.println("-------------------");
 				casa.getQuarto().ligaTv(comodo, true);
 			}
 
 			if (comodo.equals("sala")) {
+				System.out.println("-------------------");
+				System.out.println("Você está na Sala");
+				System.out.println("-------------------");
 				casa.getSala().ligaFlp(comodo, true);
 			}
+			
+			if (comodo.equals("banheiro")) {
+				System.out.println("-------------------");
+				System.out.println("Você está no Banheiro");
+				System.out.println("-------------------");
+				casa.getBanheiro().ligandoLuzBanheiro(comodo);
+			}
+			
+			if(comodo.equals("cozinha")) {
+				System.out.println("-------------------");
+				System.out.println("Você está na Cozinha");
+				System.out.println("-------------------");
+				casa.getCozinha().ligandoLuzCozinha(comodo);
+			}
+				
 
 			if (comodo.equals("sair") && (casa.getQuarto().isTvLigada())) {
 				System.out.println("Desligue a televisão para sair");
@@ -108,12 +140,22 @@ public class Casa {
 			}
 			
 			if (comodo.equals("sair") && (casa.getQuarto().getLampada().isAcesa())) {
-				System.out.println("Apague a lampada do Quarto");
+				System.out.println("Apague a luz do Quarto");
 				System.out.println("------------------------------");
 			}
 			
 			if (comodo.equals("sair") && (casa.getSala().getLampada().isAcesa())) {
-				System.out.println("Apague a lampada da Sala");
+				System.out.println("Apague a luz da Sala");
+				System.out.println("------------------------------");
+			}
+			
+			if (comodo.equals("sair") && (casa.getBanheiro().getLampada().isAcesa())) {
+				System.out.println("Apague a luz do Banheiro");
+				System.out.println("------------------------------");
+			}
+			
+			if (comodo.equals("sair") && (casa.getCozinha().getLampada().isAcesa())) {
+				System.out.println("Apague a luz da Cozinha");
 				System.out.println("------------------------------");
 			}
 			

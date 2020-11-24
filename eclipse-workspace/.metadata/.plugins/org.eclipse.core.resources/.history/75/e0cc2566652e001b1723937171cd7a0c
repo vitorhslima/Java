@@ -1,0 +1,31 @@
+package brasil.br.com.bytebank.banco.util;
+
+public class Teste {
+	
+		public static void main(String[] args) {	
+	
+			     
+	
+				conta cc1 = new contacorrente(22, 33);
+			    cc1.deposita(333.0);
+	
+			    conta cc2 = new contapoupanca(22, 44);
+			    cc2.deposita(444.0);
+	
+			    conta cc3 = new contacorrente(22, 11);
+			    cc3.deposita(111.0);
+	
+			    conta cc4 = new contapoupanca(22, 22);
+			    cc4.deposita(222.0);
+	
+			    list<conta> lista = new arraylist<>();
+			    lista.add(cc1);
+			    lista.add(cc2);
+			    lista.add(cc3);
+			    lista.add(cc4);
+	
+		}
+
+		
+}
+

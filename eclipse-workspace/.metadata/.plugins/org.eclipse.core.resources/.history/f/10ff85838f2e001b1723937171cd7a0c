@@ -1,0 +1,6 @@
+
+public class Banheiro extends Estrutura {
+	
+	 getLampada().ligandoHaLampada(comodo);
+		
+}
