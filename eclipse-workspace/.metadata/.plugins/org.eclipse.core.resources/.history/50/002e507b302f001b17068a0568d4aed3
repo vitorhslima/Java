@@ -1,0 +1,29 @@
+package br.com.alura.java.io.teste;
+
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+
+public class TesteEscrita {
+
+	public static void main(String[] args) throws IOException {
+
+		//Fluxo de entrada com um arquivo
+		
+		OutputStream fos = new FileOutputStream("metodosVistos2.txt");
+		Writer osw = new OutputStreamWriter(fos);
+		BufferedWriter bw = new BufferedWriter(osw);
+		
+		bw.write("Ganha novas armas funcionais, compete pela glória no recém-aberto estádio em Warzone");
+		bw.newLine();
+		bw.newLine();
+		bw.write("desbloqueia Skins de Operacional gratuitas, diagramas de armas, relógios e tokens de XP");
+		
+		
+		bw.close(); // to close Buffer
+	}
+
+}
