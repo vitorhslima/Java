@@ -2,6 +2,7 @@ package br.com.alura.java.io.teste;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -19,11 +20,11 @@ public class TesteCopiarArquivo {
 		
 		Socket s = new Socket();
 		
-		InputStream fis = s.getInputStream();   //System.in; //new FileInputStream("metodosVistos.txt");
+		InputStream fis = new FileInputStream("metodosVistos.txt");      //System.in;       //s.getInputStream();    
 		Reader isr = new InputStreamReader(fis);
 		BufferedReader br = new BufferedReader(isr);
 		
-		OutputStream fos = s.getOutputStream(); //System.out; //new FileOutputStream("metodosVistos1.txt");
+		OutputStream fos = System.out;     //s.getOutputStream();  //new FileOutputStream("metodosVistos1.txt");
 		Writer osw = new OutputStreamWriter(fos);
 		BufferedWriter bw = new BufferedWriter(osw);
 		

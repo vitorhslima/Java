@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="Cliente"/>
-    <fullyQualifiedTypeName name="sun.security.action.GetBooleanAction"/>
-    <fullyQualifiedTypeName name="Conta"/>
-    <fullyQualifiedTypeName name="FuncionarioTeste"/>
-    <fullyQualifiedTypeName name="EditorVideo"/>
     <fullyQualifiedTypeName name="ContaPoupanca"/>
     <fullyQualifiedTypeName name="Designer"/>
     <fullyQualifiedTypeName name="SistemaInterno"/>
@@ -20,7 +14,6 @@
     <fullyQualifiedTypeName name="CalculadorDeImposto"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="Banheiro"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="Sala"/>
     <fullyQualifiedTypeName name="Quarto"/>
     <fullyQualifiedTypeName name="Sala.Quarto"/>
@@ -28,7 +21,6 @@
     <fullyQualifiedTypeName name="javax.swing.InputVerifier"/>
     <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
-    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
     <fullyQualifiedTypeName name="java.lang.VerifyError"/>
     <fullyQualifiedTypeName name="ContaCorrente"/>
     <fullyQualifiedTypeName name="ComodoInvalidoExcption"/>
@@ -38,7 +30,6 @@
     <fullyQualifiedTypeName name="brasil.br.com.bytebank.banco.modelo.ContaPoupanca"/>
     <fullyQualifiedTypeName name="brasil.br.com.bytebank.banco.modelo.Cliente"/>
     <fullyQualifiedTypeName name="brasil.br.com.bytebank.banco.modelo.GuardadorDeContas"/>
-    <fullyQualifiedTypeName name="brasil.br.com.bytebank.banco.modelo.ContaCorrente"/>
     <fullyQualifiedTypeName name="java.lang.Object"/>
     <fullyQualifiedTypeName name="brasil.br.com.bytebank.banco.modelo.Conta"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
@@ -52,4 +43,21 @@
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.util.function.Consumer"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
+    <fullyQualifiedTypeName name="java.io.PrintStream"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.util.Locale"/>
+    <fullyQualifiedTypeName name="java.nio.charset.StandardCharsets"/>
+    <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
+    <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
+    <fullyQualifiedTypeName name="brasil.br.com.bytebank.banco.modelo.ContaCorrente"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+    <fullyQualifiedTypeName name="java.nio.charset.Charset"/>
 </qualifiedTypeNameHistroy>

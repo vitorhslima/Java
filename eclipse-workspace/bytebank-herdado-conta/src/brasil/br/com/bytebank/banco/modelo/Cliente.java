@@ -1,7 +1,8 @@
 package brasil.br.com.bytebank.banco.modelo;
 
+import java.io.Serializable;
 
-	/**
+/**
 	 * Classe que representa um cliente no Bytebank.
 	 * 
 	 * @author Zinho
@@ -11,7 +12,7 @@ package brasil.br.com.bytebank.banco.modelo;
 
 
 
-public class Cliente {
+public class Cliente implements Serializable {
 	
 	private String nome;
 	private String cpf;

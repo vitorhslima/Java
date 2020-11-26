@@ -1,0 +1,15 @@
+package br.com.casa.rodar;
+import java.util.Scanner;
+
+import br.com.casa.projeto.Casa;
+
+public class ProjetoBase {
+
+	public static void main(String[] args) {
+		
+		Casa casa = new Casa();
+
+		casa.gerenciaCasa();
+		
+	}
+}

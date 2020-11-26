@@ -26,7 +26,7 @@ public class TesteEscritaPrintStreamPrintWrite {
 		
 		PrintWriter ps = new PrintWriter("metodosVistos.txt");
 		
-		ps.println("Ganha novas armas funcionais, compete pela gloria no recem-aberto estadio em Warzone");
+		ps.println("tu que é");
 		ps.println();
 		ps.println("desbloqueia Skins de Operacional gratuitas, diagramas de armas, por regioes e tokens de XP");
 		ps.println();

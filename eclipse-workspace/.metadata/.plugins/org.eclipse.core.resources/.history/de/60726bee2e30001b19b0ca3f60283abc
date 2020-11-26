@@ -1,0 +1,38 @@
+package br.com.casa.rodar;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.Reader;
+
+public class LeituraDeArquivo {
+	
+	public static void main(String[] args) throws IOException {
+		
+		InputStream is = new FileInputStream("C:\\leitura\\arquivo.txt");
+		Reader isr = new InputStreamReader(is);
+		BufferedReader br = new BufferedReader(isr);
+		
+		String linha = br.readLine();	
+		
+		System.out.println(linha);
+		linha = br.readLine();	
+		
+		OutputStreamWriter bufferOut = new OutputStreamWriter(
+                new FileOutputStream("C:\\leitura\\arquivo.txt"),"UTF-8");
+
+			bufferOut.write("acento agudo: бйнуъ\n");
+			bufferOut.write("acento circunflexo: вкофы\n");
+			bufferOut.write("fim");
+
+bufferOut.close();
+		
+		br.close();
+		
+	}
+
+}

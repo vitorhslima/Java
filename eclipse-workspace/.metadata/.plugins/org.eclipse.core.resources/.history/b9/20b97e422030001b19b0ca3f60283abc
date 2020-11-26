@@ -1,0 +1,9 @@
+import br.com.casa.projeto.Estrutura;
+
+public class Banheiro extends Estrutura {
+	
+	  public void ligandoLuzBanheiro(String comodo) {
+		  getLampada().ligandoHaLampada(comodo);
+	  }
+		
+}
