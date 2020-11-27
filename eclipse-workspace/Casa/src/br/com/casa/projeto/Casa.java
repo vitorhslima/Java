@@ -11,6 +11,11 @@ public class Casa {
 	private Estrutura estrutura = new Estrutura();
 	private Banheiro banheiro = new Banheiro();
 	private Cozinha cozinha = new Cozinha();
+	private DesligarTudo desligar = new DesligarTudo();
+	
+	public DesligarTudo getDesligarTudo() {
+		return desligar;
+	}
 	
 	public Cozinha getCozinha() {
 		return cozinha;
@@ -55,10 +60,16 @@ public class Casa {
 		casa.getSala().getLampada().setAcessa(true);
 		casa.getBanheiro().getLampada().setAcessa(true);
 		casa.getCozinha().getLampada().setAcessa(true);
+		casa.getBanheiro().setChuveiro(true);
+		casa.getCozinha().setFogao(true);
 
 		System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=");  
 		System.out.println("Para sair escreva 'sair' ");
 		System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=");
+		
+		System.out.println("===================ATENÇÃO==================");
+		System.out.println("Para desligar tudo basta escrever 'desligar'");
+		System.out.println("============================================");
 
 		 
 			
@@ -70,7 +81,9 @@ public class Casa {
 				|| (casa.getSala().getLampada().isAcesa())
 				|| (casa.getQuarto().getLampada().isAcesa())
 				|| (casa.getBanheiro().getLampada().isAcesa())
-				|| (casa.getCozinha().getLampada().isAcesa())) {
+				|| (casa.getCozinha().getLampada().isAcesa())
+		        || (casa.getBanheiro().isChuveiroAberto())
+				|| (casa.getCozinha().isFogaoLigado()))	{
 
 			try {
 			if (primeiraVez) {
@@ -80,6 +93,8 @@ public class Casa {
 				casa.getSala().getLampada().setAcessa(false);
 				casa.getBanheiro().getLampada().setAcessa(false);
 				casa.getCozinha().getLampada().setAcessa(false);
+				casa.getBanheiro().setChuveiro(false);
+				casa.getCozinha().setFogao(false);
 				primeiraVez = false;
 			}
 
@@ -131,6 +146,10 @@ public class Casa {
 				System.out.println("-------------------");
 				casa.getCozinha().ligandoLuzCozinha(comodo);
 			}
+			
+			if (comodo.equals("desligar")) {
+				getDesligarTudo().desligar(casa);
+			}
 				
 
 			if (comodo.equals("sair") && (casa.getQuarto().isTvLigada())) {
@@ -163,7 +182,17 @@ public class Casa {
 				System.out.println("------------------------------");
 			}
 			
-			}catch (ComodoInvalidoExcption ex) {
+			if (comodo.equals("sair") && (casa.getBanheiro().isChuveiroAberto() )) {
+				System.out.println("Feche o chuveiro");
+				System.out.println("------------------------------");
+			}
+			
+			if (comodo.equals("sair") && (casa.getCozinha().isFogaoLigado() )) {
+				System.out.println("Desligue o fogão primeiro");
+				System.out.println("------------------------------");
+			}
+			
+			} catch (ComodoInvalidoExcption ex) {
 				String msg = ex.getMessage();
 				System.out.println("-----------------------");  
 				System.out.println(ex.getMessage());

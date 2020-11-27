@@ -1,6 +1,5 @@
 package br.com.casa.projeto;
 import java.util.Scanner;
-
 import br.com.casa.rodar.ComodoInvalidoExcption;
 
 public class Lampada {

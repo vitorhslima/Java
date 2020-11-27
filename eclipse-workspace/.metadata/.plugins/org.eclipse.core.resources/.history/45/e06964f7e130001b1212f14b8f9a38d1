@@ -1,0 +1,25 @@
+package br.com.casa.rodar;
+
+public enum ComodoEnum {
+
+	cozinha,	
+	banheiro,
+	sala,
+	quarto;
+	
+	public static boolean existeComodo(String comodo) {
+		
+		for(ComodoEnum c: ComodoEnum.values()) {
+			if (!comodo.equals("sair")) {
+				if (comodo.equals(c.name())) {
+					System.out.println("comodo: " + comodo + " true");
+					return true;
+				}
+			}
+		}
+		
+		System.out.println("comodo: " + comodo + " false");
+		return false;
+	}
+	
+}

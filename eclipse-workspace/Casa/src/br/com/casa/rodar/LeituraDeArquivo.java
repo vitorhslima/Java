@@ -23,7 +23,7 @@ public class LeituraDeArquivo {
 		linha = br.readLine();	
 		
 		PrintWriter ps = new PrintWriter("C:\\leitura\\arquivo.txt",Charset.forName("UTF-8"));
-		ps.println("O Tio Anderson que é :/ ");		
+		ps.println("O Tio Anderson que Ã© :/ ");		
 		
 		ps.close();
 		

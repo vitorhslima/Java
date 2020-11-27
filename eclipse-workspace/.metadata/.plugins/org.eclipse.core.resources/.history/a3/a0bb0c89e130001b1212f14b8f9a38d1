@@ -1,0 +1,61 @@
+package br.com.casa.projeto;
+
+
+public class Desligar {
+
+	//public Casa casa = new Casa();
+	private Lampada lampada = new Lampada();
+	private Quarto quarto = new Quarto();
+	private Banheiro banheiro = new Banheiro();
+	private Cozinha cozinha = new Cozinha();
+	private Sala sala = new Sala();
+	
+	
+	public void desligarTudo() {
+		getSala().setFliperama(false);
+		getQuarto().setTelevisao(false);
+		getQuarto().getLampada().setAcessa(false);
+		getSala().getLampada().setAcessa(false);
+		getBanheiro().getLampada().setAcessa(false);
+		getCozinha().getLampada().setAcessa(false);
+		getBanheiro().setChuveiro(false);
+		
+		System.out.println("Tudo foi desligado !");
+	}	
+	
+	
+	
+	public Lampada getLampada() {
+		return lampada;
+	}
+	public void setLampada(Lampada lampada) {
+		this.lampada = lampada;
+	}
+	public Quarto getQuarto() {
+		return quarto;
+	}
+	public void setQuarto(Quarto quarto) {
+		this.quarto = quarto;
+	}
+	public Banheiro getBanheiro() {
+		return banheiro;
+	}
+	public void setBanheiro(Banheiro banheiro) {
+		this.banheiro = banheiro;
+	}
+	public Cozinha getCozinha() {
+		return cozinha;
+	}
+	public void setCozinha(Cozinha cozinha) {
+		this.cozinha = cozinha;
+	}
+	public Sala getSala() {
+		return sala;
+	}
+	public void setSala(Sala sala) {
+		this.sala = sala;
+	}
+	
+	
+	
+}

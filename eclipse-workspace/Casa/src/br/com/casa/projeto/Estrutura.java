@@ -1,4 +1,5 @@
 package br.com.casa.projeto;
+
 public class Estrutura {
 	
 	private Lampada lampada = new Lampada();

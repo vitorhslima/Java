@@ -1,0 +1,27 @@
+package br.com.casa.projeto;
+
+import java.util.Scanner;
+
+public class Cozinha extends Estrutura {
+	
+	public void ligandoLuzCozinha(String comodo) {
+		getLampada().ligandoHaLampada(comodo);
+	}
+
+	public void ligaFogao(String comodo) {		
+
+		Scanner sair = new Scanner(System.in);		  
+		
+		System.out.println("Você quer ligar o Fogão ? | Para liga escreva 'liga' ou 'desligar'");
+		comodo = sair.next().toLowerCase();
+			
+		if(comodo.equals("liga")) {
+			System.out.println("ta ligado");	
+		}
+		
+		
+		
+	}
+	
+	
+}

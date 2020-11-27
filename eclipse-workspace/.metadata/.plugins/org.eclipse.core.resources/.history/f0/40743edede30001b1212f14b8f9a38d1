@@ -1,0 +1,15 @@
+package br.com.casa.projeto;
+
+
+public class DesligarTudo {
+
+	//public Casa casa = new Casa();
+	private Lampada lampada = new Lampada();
+	private Quarto quarto = new Quarto();
+	private Banheiro banheiro = new Banheiro();
+	private Cozinha cozinha = new Cozinha();
+	private Sala sala = new Sala();
+	
+	
+	
+}

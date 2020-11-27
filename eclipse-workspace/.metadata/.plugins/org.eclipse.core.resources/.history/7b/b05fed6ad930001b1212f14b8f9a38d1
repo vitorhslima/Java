@@ -1,0 +1,18 @@
+package br.com.casa.projeto;
+import java.util.Scanner;
+
+public class Banheiro extends Estrutura {
+	
+	  public void ligandoLuzBanheiro(String comodo) {
+		  getLampada().ligandoHaLampada(comodo);
+		  ligandoChuveiro(comodo);
+	  }
+	  
+	  public void ligandoChuveiro(String comodo) {
+		  
+		  Scanner sair = new Scanner(System.in);
+		  
+		  System.out.println("Quer tomar um banho ? | Para abri a água escreva 'abrir' ou 'fechar' ");
+		  comodo = sair.next().toLowerCase();
+	  }
+}
