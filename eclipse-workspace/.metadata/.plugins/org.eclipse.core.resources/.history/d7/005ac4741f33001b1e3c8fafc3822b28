@@ -1,0 +1,10 @@
+package br.com.alura;
+
+public class TestandoListas {
+
+	public static void main(String[] args) {
+		String aula1 = "Conhecendo mais de listas";
+		String aula2 = "Motelando a classe Aula";
+		String aula3 = "Trabalhando com Cursos e Sets";
+	}
+}

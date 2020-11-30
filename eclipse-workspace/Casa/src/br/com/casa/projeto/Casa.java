@@ -1,4 +1,5 @@
 package br.com.casa.projeto;
+import java.awt.dnd.DropTargetListener;
 import java.util.Scanner;
 
 import br.com.casa.rodar.ComodoEnum;
@@ -12,6 +13,11 @@ public class Casa {
 	private Banheiro banheiro = new Banheiro();
 	private Cozinha cozinha = new Cozinha();
 	private DesligarTudo desligar = new DesligarTudo();
+	private LigaTudo liga = new LigaTudo();
+	
+	public LigaTudo getLiga() {
+		return liga;
+	}
 	
 	public DesligarTudo getDesligarTudo() {
 		return desligar;
@@ -149,6 +155,10 @@ public class Casa {
 			
 			if (comodo.equals("desligar")) {
 				getDesligarTudo().desligar(casa);
+			}
+			
+			if (comodo.equals("ligart")) {
+				getLiga().ligar(casa);
 			}
 				
 

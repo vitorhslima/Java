@@ -1,0 +1,23 @@
+package br.com.alura;
+
+import java.util.ArrayList;
+
+public class TestaandoLista {
+	
+	public static void main(String[] args) {
+		
+		String jogo1 = "Warzone";
+		String jogo2 = "Cod Modern Wafare";
+		String jogo3 = "Rainbow Six Siege";
+		
+		ArrayList<String> jogos = new ArrayList<>(); 
+		jogos.add(jogo1);
+		jogos.add(jogo2);
+		jogos.add(jogo3);
+		
+		for (String jogo : jogos) {
+			System.out.println("Os jogos são " + jogo);
+		}
+	}
+
+}
