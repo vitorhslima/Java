@@ -1,5 +1,4 @@
 package br.com.casa.projeto;
-import java.awt.dnd.DropTargetListener;
 import java.util.Scanner;
 
 import br.com.casa.rodar.ComodoEnum;
