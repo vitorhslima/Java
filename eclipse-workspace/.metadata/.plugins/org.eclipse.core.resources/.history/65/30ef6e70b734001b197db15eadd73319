@@ -25,17 +25,12 @@ public class TestaCursoComAlunos {
 			System.out.println(a);
 		});
 		
-//		 while(it.hasNext()) { 					utilizando a moda antiga
-//			 System.out.println(it.next());
-//		 }
-			
-		
 		System.out.println("O aluno " + a1 + "está matriculado ?");
 		System.out.println(javaColecoes.estaMatriculado(a1));
 		
 		Aluno Larissa = new Aluno("Larissa Martins", 1011);
 		System.out.println("E essa Larissa, está matriculada ? ");
-		System.out.println(javaColecoes.estaMatriculado(Larissa));
+		System.out.println(javaColecoes.estaMatriculado(Larrisa));
 		
 		System.out.println("O a2 é equals a larissa");
 		System.out.println(a2.equals(Larissa));

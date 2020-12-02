@@ -6,14 +6,11 @@ public class Aluno {
 	private int numeroMatricula;
 	
 	public Aluno(String nome, int numeroMatricula) {
-		if (nome == null) {
-			throw new NullPointerException("O nome não pode estar vazio");
-		}
 		this.nome = nome;
 		this.numeroMatricula = numeroMatricula;
 	}
 
-	public String getNome() {		
+	public String getNome() {
 		return nome;
 	}
 
@@ -31,7 +28,7 @@ public class Aluno {
 		Aluno outro = (Aluno) obj;
 		return this.nome.equals(outro.nome);
 	} 
-						// Sempre que rescrever o metodo equals tem que rescrever o hash code
+	
 	@Override
 	public int hashCode() {
 		return this.nome.hashCode();

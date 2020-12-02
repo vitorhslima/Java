@@ -1,0 +1,27 @@
+package br.com.alura;
+
+public class TestaBuscaAlunosNoCurso {
+
+	public static void main(String[] args) {
+		
+		Curso javaColecoes = new Curso("Dominando as coleções do java", "Vitor Hugo");		
+
+		javaColecoes.adiciona(new Aula("Trabalhando com ArrayList", 21));
+		javaColecoes.adiciona(new Aula("Criando uma Aula", 21));
+		javaColecoes.adiciona(new Aula("Modelando com coleções", 22));
+		
+		Aluno a1 = new Aluno("Vitor Hugo", 1001);
+		Aluno a2 = new Aluno("Larissa Martins", 1010);
+		Aluno a3 = new Aluno("Allan Vinicius", 2020);
+		Aluno a4 = new Aluno("Yuji", 3030);
+		
+		javaColecoes.matricular(a1);
+		javaColecoes.matricular(a2);
+		javaColecoes.matricular(a3);
+		javaColecoes.matricular(a4);
+		
+		System.out.println("Quem é o aluno com matricula 1001 ? ");
+		Aluno aluno = javaColecoes.buscarMatriculado(1001);
+		System.out.println("Aluno : " + aluno);
+	}
+}

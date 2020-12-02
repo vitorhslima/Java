@@ -10,7 +10,7 @@ public class TestaCursoComAlunos {
 		javaColecoes.adiciona(new Aula("Criando uma Aula", 21));
 		javaColecoes.adiciona(new Aula("Modelando com coleções", 22));
 		
-		Aluno a1 = new Aluno("Vitor Hugo", 1001);
+		//Aluno a1 = new Aluno("Vitor Hugo", 1001);
 		Aluno a2 = new Aluno("Larissa Martins", 1010);
 		Aluno a3 = new Aluno("Allan Vinicius", 2020);
 		Aluno a4 = new Aluno("Yuji", 3030);
@@ -25,20 +25,8 @@ public class TestaCursoComAlunos {
 			System.out.println(a);
 		});
 		
-//		 while(it.hasNext()) { 					utilizando a moda antiga
-//			 System.out.println(it.next());
-//		 }
-			
-		
 		System.out.println("O aluno " + a1 + "está matriculado ?");
 		System.out.println(javaColecoes.estaMatriculado(a1));
-		
-		Aluno Larissa = new Aluno("Larissa Martins", 1011);
-		System.out.println("E essa Larissa, está matriculada ? ");
-		System.out.println(javaColecoes.estaMatriculado(Larissa));
-		
-		System.out.println("O a2 é equals a larissa");
-		System.out.println(a2.equals(Larissa));
 		
 	}
 }
