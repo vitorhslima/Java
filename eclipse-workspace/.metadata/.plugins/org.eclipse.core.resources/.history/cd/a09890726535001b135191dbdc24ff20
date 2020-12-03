@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class OrdenaStrings {
+	
+	public static void main(String[] args) {
+		
+		List<String> palavra = new ArrayList<>();
+		palavra.add("jogo online");
+		palavra.add("joogso de tiro");
+		palavra.add("celular top");
+		
+		Collections.sort(palavra);
+		System.out.println(palavra);
+		
+	}
+
+}
