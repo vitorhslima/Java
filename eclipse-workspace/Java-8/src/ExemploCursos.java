@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
+import java.util.stream.Collectors;
 
 class Curso {
 		
@@ -33,17 +33,30 @@ class Curso {
 			cursos.add(new Curso("C", 55));
 			
 			cursos.sort(Comparator.comparing(c -> c.getAlunos()));			
-			
-			cursos.stream()
-				.filter(c -> c.getAlunos() >= 100)	
-				.map(c -> c.getAlunos())
-				.forEach (total -> System.out.println(total));
-			
-				Optional<Curso>	optionalCurso = cursos.stream()
-						.filter(c -> c.getAlunos() >= 100)
-						.findAny();
+
+			int sum = cursos.stream()
+					.filter(c -> c.getAlunos() >= 100)
+					.mapToInt(Curso::getAlunos)
+					.sum();		
 				
-				optionalCurso.ifPresent(c -> System.out.println(c.getNome()));
+//Para filtar alunos c mias de 100 
+			 
+			 System.out.println(sum);
+			
+				cursos.stream()
+						.filter(c -> c.getAlunos() >= 100)
+						.findAny()				// P/ pegar um | me de um				
+						.ifPresent(c -> System.out.println(c.getNome()));
+				
+				cursos.parallelStream()
+				.filter(c -> c.getAlunos() >= 100)
+				.collect(Collectors.toMap(
+						c -> c.getNome(),
+						c -> c.getAlunos()))
+				.forEach((nome, alunos) -> System.out.println(nome + " tem " + alunos +" alunos"));
+				
+				
+				
 		}
 	}
 	

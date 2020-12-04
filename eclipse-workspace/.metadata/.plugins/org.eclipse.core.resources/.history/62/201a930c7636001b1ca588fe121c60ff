@@ -1,0 +1,22 @@
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.Period;
+
+public class Datas {
+	
+	public static void main(String[] args) {
+		LocalDate hoje = LocalDate.now();
+		System.out.println(hoje);
+		
+		LocalDate meuAniversario = LocalDate.of(2020, Month.DECEMBER, 16);
+		
+		int anos = meuAniversario.getYear() - hoje.getYear();
+		
+		System.out.println(anos);
+		
+		Period periodo = Period.between(hoje, meuAniversario);
+		
+		System.out.println(periodo);
+	}
+
+}
