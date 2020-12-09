@@ -1,0 +1,12 @@
+package br.com.caelum.leilao.teste;
+
+import br.com.caelum.leilao.dominio.Leilao;
+
+public class LeilaoTeste {
+	
+	@Test
+	public void deveReceberUmLance() {
+		Leilao leilao = new Leilao("Notebook pro prayer !"); 
+	}
+
+}

@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.VerifyError"/>
-    <fullyQualifiedTypeName name="ContaCorrente"/>
-    <fullyQualifiedTypeName name="ComodoInvalidoExcption"/>
-    <fullyQualifiedTypeName name="Conecao"/>
     <fullyQualifiedTypeName name="SaldoInsuficienteException"/>
     <fullyQualifiedTypeName name="java.lang.IllegalStateException"/>
     <fullyQualifiedTypeName name="brasil.br.com.bytebank.banco.modelo.ContaPoupanca"/>
@@ -53,11 +49,15 @@
     <fullyQualifiedTypeName name="java.time.Month"/>
     <fullyQualifiedTypeName name="br.com.caelum.leilao.servico.Avaliador"/>
     <fullyQualifiedTypeName name="org.junit.Test"/>
-    <fullyQualifiedTypeName name="junit.framework.Assert"/>
     <fullyQualifiedTypeName name="java.awt.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.Collection"/>
     <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="br.com.caelum.leilao.dominio.Lance"/>
+    <fullyQualifiedTypeName name="org.junit.After"/>
+    <fullyQualifiedTypeName name="org.junit.BeforeClass"/>
+    <fullyQualifiedTypeName name="br.com.caelum.leilao.biulder.CriadorDeLeilao"/>
+    <fullyQualifiedTypeName name="junit.framework.Assert"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
 </qualifiedTypeNameHistroy>

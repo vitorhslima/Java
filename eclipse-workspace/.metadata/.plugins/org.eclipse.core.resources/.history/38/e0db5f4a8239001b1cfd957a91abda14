@@ -1,0 +1,46 @@
+package br.com.caelum.leilao.teste;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.Test;
+
+import br.com.caelum.leilao.dominio.Lance;
+import br.com.caelum.leilao.dominio.Leilao;
+import br.com.caelum.leilao.dominio.Usuario;
+
+public class LeilaoTeste {
+	
+	@Test
+	public void deveReceberUmLance() {
+		Leilao leilao = new Leilao("Notebook pro prayer !"); 
+		assertEquals(0, leilao.getLances().size());
+		
+		leilao.propoe(new Lance(new Usuario("Ninext"), 2000));
+		
+		assertEquals(1, leilao.getLances().size());
+		assertEquals(2000.0, leilao.getLances().get(0).getValor(), 0.00001);
+	}
+	
+	@Test
+	public void deveReceberVariosLances() {
+		Leilao leilao = new Leilao("Teclado Mecanico gamer RGB");
+		leilao.propoe(new Lance(new Usuario("Zigueira"), 3000));
+		leilao.propoe(new Lance(new Usuario("Stolen"), 2500));
+		assertEquals(2, leilao.getLances().size());
+		assertEquals(3000, leilao.getLances().get(0).getValor(), 0.00001);
+		assertEquals(2500, leilao.getLances().get(1).getValor(), 0.00001);
+	}
+	
+	@Test
+	public void NaoDeveAceidarDoisLancesSeguidosDoMesmoUsuario() {
+		Leilao leilao = new Leilao("Mouse Ped");
+		Usuario paranga = new Usuario("Paraganga");
+		leilao.propoe(new Lance(paranga, 2000));
+		leilao.propoe(new Lance(paranga, 3000));
+		
+		assertEquals(1, leilao.getLances().size(), 0.00001);
+		assertEquals(2000, leilao.getLances().get(0).getValor());
+		
+	}
+
+}

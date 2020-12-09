@@ -4,8 +4,12 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.List;
 
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
+import br.com.caelum.leilao.biulder.CriadorDeLeilao;
 import br.com.caelum.leilao.dominio.Lance;
 import br.com.caelum.leilao.dominio.Leilao;
 import br.com.caelum.leilao.dominio.Usuario;
@@ -14,29 +18,35 @@ import junit.framework.Assert;
 
 public class TesteAvaliador {
 	
-	@Test
-	public void deveEntenderLanceEmOrdemCrecente() {
+	private Avaliador leiloeiro;
+	private Usuario jose;
+	private Usuario maria;
+	
+	@Before
+	public void criaAvaliador() { 
+		this.leiloeiro = new Avaliador();  // chama o metoto antes de todods os testes. 
+		System.out.println("cria avaliador"); 
 		
-		Usuario vitor = new Usuario("Vitor");
-		Usuario jose = new Usuario("Jose");
-		Usuario maria = new Usuario("Maria");
-		
-		Leilao leilao = new Leilao("PC gamer Roda tudo");
-		
-		leilao.propoe(new Lance(jose, 300.0));
-		leilao.propoe(new Lance(vitor, 800.0));
-		leilao.propoe(new Lance(maria, 400.0));
-		
-		Avaliador leiloeiro = new Avaliador();
-		leiloeiro.avalia(leilao);		
-		
-		
-		double maiorEsperado = 800;
-		double menorEsperado = 300;
-		
-		assertEquals(maiorEsperado, leiloeiro.getMaiorLance(), 0.00001);
-		assertEquals(menorEsperado, leiloeiro.getMenorLance(), 0.00001);
+		this.jose = new Usuario("Jose");
+		this.maria = new Usuario("Maria");
 	}
+	
+	@Test(expected=RuntimeException.class)
+	public void naoDeveAvaliarSemlances() {
+				
+			Leilao leilao = new CriadorDeLeilao().para("Placa de video GTX 1.060").constroi();
+			leiloeiro.avalia(leilao);
+			Assert.fail();	
+		
+	}
+	
+//	@Test
+//	public void deveEntenderLanceEmOrdemCrecente() {		
+//		Leilao leilao = new Leilao("PC gamer Roda tudo");
+//		leiloeiro.avalia(leilao);
+//	}
+//	
+	
 	
 	@Test 	
 	public void deveEntenderleilaoComApenasumlance() {
@@ -45,7 +55,6 @@ public class TesteAvaliador {
 		
 		leilao.propoe(new Lance(paula, 1000.0));
 		
-		Avaliador leiloeiro = new Avaliador();
 		leiloeiro.avalia(leilao);
 		
 		assertEquals(1000.0, leiloeiro.getMaiorLance(), 0.00001);
@@ -53,26 +62,35 @@ public class TesteAvaliador {
 	}
 	
 	@Test
-	public void deveEncootrarOstResMaioresLances() {
-		Usuario joao = new Usuario("joão");
-		Usuario maria = new Usuario("Maria");
+	public void deveEncootrarOstResMaioresLances() {			
 		
-		Leilao leilao = new Leilao("Mouse gamer");
+		Leilao leilao = new CriadorDeLeilao().para("Monitor 144 Hz")
+				.lance(jose, 100)
+				.lance(maria, 200)
+				.lance(jose, 300)
+				.lance(maria, 400)
+				.constroi();
 		
-		leilao.propoe(new Lance(joao, 100.0));
-		leilao.propoe(new Lance(maria, 200.0));
-		leilao.propoe(new Lance(joao, 300.0));
-		leilao.propoe(new Lance(maria, 400.0));
-		
-		Avaliador leiloeiro = new Avaliador();
 		leiloeiro.avalia(leilao);
 		
 		List<Lance> maiores = leiloeiro.getTresMaiores();
-		assertEquals(3, maiores.size());
-//		assertEquals(400.0, maiores.get(0).getValor(), 0.00001);
-//      assertEquals(300.0, maiores.get(1).getValor(), 0.00001);
-//      assertEquals(200.0, maiores.get(2).getValor(), 0.00001);
+		assertEquals(3, maiores.size());	
 	}
+	
+	@BeforeClass
+	public static void testandoBeforeClass() {
+	  System.out.println("before class");
+	}
+							//		Esses etodos são executados apenas uma vez 
+	@AfterClass
+	public static void testandoAfterClass() {
+	  System.out.println("after class");
+	}
+	
+//	@After
+//	public void finaliza() {
+//	  System.out.println("fim"); // Esse metodo executa toda vez que acaba um metodo !
+//	}
 	
 
 }

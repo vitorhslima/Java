@@ -17,12 +17,13 @@ public class Avaliador {
 
 	public void avalia(Leilao leilao) {
 		
-		double total = 0;
+		if(leilao.getLances().size() == 0) {
+			throw new RuntimeException("Não foi possivel avaliar um leialo sem lances");
+		}
 		
 		for(Lance lance : leilao.getLances()) {
 			if(lance.getValor() > maiorDeTodos) maiorDeTodos = lance.getValor();
 		    if(lance.getValor() < menorDeTodos) menorDeTodos = lance.getValor();
-		    total += lance.getValor();
 		}
 		
 		maiores = new ArrayList<Lance>(leilao.getLances());
@@ -37,7 +38,7 @@ public class Avaliador {
 		
 		maiores = maiores.subList(0, maiores.size() > 3 ? 3 : maiores.size());
 		
-		
+		double total = 0;
 		
 		if (total == 0) {
 			media = 0;
