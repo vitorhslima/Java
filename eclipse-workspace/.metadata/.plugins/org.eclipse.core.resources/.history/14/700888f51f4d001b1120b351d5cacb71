@@ -92,9 +92,7 @@ public class Casa {
 				|| (casa.getBanheiro().getLampada().isAcesa())
 				|| (casa.getCozinha().getLampada().isAcesa())
 		        || (casa.getBanheiro().isChuveiroAberto())
-				|| (casa.getCozinha().isFogaoLigado())
-				|| (casa.getEscritorio().isPCgamerLigado())
-				|| (casa.getEscritorio().getLampada().isAcesa()) ) {
+				|| (casa.getCozinha().isFogaoLigado()))	{
 
 			try {
 			if (primeiraVez) {
@@ -222,8 +220,8 @@ public class Casa {
 			}
 			
 			if (comodo.equals("sair") && (casa.getEscritorio().getLampada().isAcesa())) {
-				System.out.println("Desligue a Luz do Escritorio gamer primeiro");
-				System.out.println("-------------------------------------------");
+				System.out.println("Desligue a lanpada do Escritorio gamer primeiro");
+				System.out.println("-----------------------------------------------");
 			}
 			
 			} catch (ComodoInvalidoExcption ex) {

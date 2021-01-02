@@ -64,8 +64,6 @@ public class Casa {
 		String comodo = "";
 
 		boolean primeiraVez = true;
-		casa.getEscritorio().getLampada().setAcessa(true);
-		casa.getEscritorio().setPCgamer(true);
 		casa.getSala().setFliperama(true);
 		casa.getQuarto().setTelevisao(true);
 		casa.getQuarto().getLampada().setAcessa(true);
@@ -92,14 +90,10 @@ public class Casa {
 				|| (casa.getBanheiro().getLampada().isAcesa())
 				|| (casa.getCozinha().getLampada().isAcesa())
 		        || (casa.getBanheiro().isChuveiroAberto())
-				|| (casa.getCozinha().isFogaoLigado())
-				|| (casa.getEscritorio().isPCgamerLigado())
-				|| (casa.getEscritorio().getLampada().isAcesa()) ) {
+				|| (casa.getCozinha().isFogaoLigado()))	{
 
 			try {
 			if (primeiraVez) {
-				casa.getEscritorio().getLampada().setAcessa(false);
-				casa.getEscritorio().setPCgamer(false);
 				casa.getSala().setFliperama(false);
 				casa.getQuarto().setTelevisao(false);
 				casa.getQuarto().getLampada().setAcessa(false);
@@ -214,16 +208,6 @@ public class Casa {
 			if (comodo.equals("sair") && (casa.getCozinha().isFogaoLigado() )) {
 				System.out.println("Desligue o fogão primeiro");
 				System.out.println("------------------------------");
-			}
-			
-			if (comodo.equals("sair") && (casa.getEscritorio().isPCgamerLigado() )) {
-				System.out.println("Desligue o PC gamer primeiro");
-				System.out.println("----------------------------");
-			}
-			
-			if (comodo.equals("sair") && (casa.getEscritorio().getLampada().isAcesa())) {
-				System.out.println("Desligue a Luz do Escritorio gamer primeiro");
-				System.out.println("-------------------------------------------");
 			}
 			
 			} catch (ComodoInvalidoExcption ex) {

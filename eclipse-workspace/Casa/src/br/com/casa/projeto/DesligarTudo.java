@@ -8,9 +8,12 @@ public class DesligarTudo {
 	private Banheiro banheiro = new Banheiro();
 	private Cozinha cozinha = new Cozinha();
 	private Sala sala = new Sala();
+	private Escritorio escritorio = new Escritorio();
 	
 	
 	public void desligar(Casa casa) {
+		casa.getEscritorio().setPCgamer(false);
+		casa.getEscritorio().getLampada().setAcessa(false);
 		casa.getSala().setFliperama(false);
 		casa.getQuarto().setTelevisao(false);
 		casa.getQuarto().getLampada().setAcessa(false);

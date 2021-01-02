@@ -8,7 +8,7 @@ public enum ComodoEnum {
 	quarto,
 	desligar,
 	ligart,
-	escritorio;
+	SalaDeGame;
 	
 	public static boolean existeComodo(String comodo) {
 		

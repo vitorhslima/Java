@@ -12,7 +12,7 @@ public class Quarto extends Estrutura {
 			  try {
 				boolean Verificador = false;
 				
-				Scanner sair = new Scanner(System.in);	
+				Scanner sair = new Scanner(System.in);					
 		
 				System.out.println("Você quer ligar a televisão | 'liga' ou 'desliga'");
 				

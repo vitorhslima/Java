@@ -58,9 +58,15 @@ public void ligar(Casa casa) {
 	public void setSala(Sala sala) {
 		this.sala = sala;
 	}
+
+
+
 	public Escritorio getEscritorio() {
 		return escritorio;
 	}
+
+
+
 	public void setEscritorio(Escritorio escritorio) {
 		this.escritorio = escritorio;
 	}
